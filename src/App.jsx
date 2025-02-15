@@ -4,7 +4,7 @@ import { Button, Input, QRCode, Space, Typography } from 'antd';
 const { Text } = Typography;
 
 function App() {
-  const [text, setText] = useState('https://example.com');
+  const [text, setText] = useState('');
 
   const handleQRCodeClick = () => {
     if (text.startsWith('http://') || text.startsWith('https://')) {
@@ -20,7 +20,7 @@ function App() {
         <Text strong>URL kiriting:</Text>
         <Input
           style={{ width: '300px' }}
-          placeholder="Havola (URL) kiriting..."
+          placeholder="https://example.com.."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
